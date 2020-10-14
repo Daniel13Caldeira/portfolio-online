@@ -1,0 +1,326 @@
+html, body{
+    margin: 0px;   
+    padding: 0px;
+    ;
+}
+
+body{
+    background-color: #2b2b2b;
+    font-family: 'Inter', sans-serif;}
+.navigation{
+
+    background-color: #2b2b2b;
+    color: #ffffff;
+    height: 50px;
+}
+.navigation ul{
+    margin-top: 0;
+    list-style: none;
+    padding-left: 0;
+    text-align: right;
+    height: 50px;
+    font-weight: 100;
+}
+.navigation li{
+    display: inline-block;
+    padding-left: 30px;
+    padding-right: 30px;
+    line-height: 50px;
+    font-size: 16px;
+
+    animation-name: navigation-ani;
+    animation-duration: 4s;
+}
+.navigation li.menuicon{
+    display: none;
+
+}
+.navigation li.menuicon:hover{
+    color: #f27609;
+    cursor: pointer;
+}
+.navigation a{
+    color:#ffffff;
+    text-decoration: none;
+}
+.navigation a:hover{
+    color: #f27609;
+}
+.capa{
+    color: #ffffff;
+}
+.capa span{
+    color: #f27609;
+    display: block;
+}
+.capa div {
+    display: inline-block;
+    height: 650px;
+}
+.profilePic{
+width: 40%;
+text-align: center;
+animation-name: profile-capa;
+animation-duration: 2s;
+}
+.profilePic img{
+    height: 320px;
+    /*para a foto ficar totalmente redonta, ela deve ser quadrada e o parâmetro do border radius deve ser o tamanho do lado da imagem*/
+    border-radius: 320px;
+    margin-top: 100px;
+}
+.profileTitle{
+vertical-align: top;
+width: 59%;
+animation-name: titulo-capa;
+animation-duration: 2s;
+}
+.profileTitle h1{
+    text-transform: uppercase;
+    font-size: 58px;
+    margin-top: 200px;
+    line-height: 54px;
+}
+.profileTitle h2{
+    font-size: 16px;
+    font-weight: 100;
+    margin-top: -25px;
+}
+
+.main {
+    /*ordem dos parâmetros: cima, direita, baixo, esquerda*/
+    padding: 80px 180px 80px 100px;
+    /*ordem dos parâmetros: cima, direita, baixo
+    padding: 80px 180px 80px;
+    */
+    /*ordem dos parâmetros: cima e baixo, direita e esquerda
+    padding: 80px 180px;
+    */
+    /*considera todos os 4 lados
+    padding: 80px;
+    */
+    animation-name: conteudo;
+    animation-duration: 2s;
+}
+
+
+.main h1{
+    color: #ffffff;
+    font-weight: normal;
+}
+
+.main h2{
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: normal;
+    margin-top: 40px;
+}
+.main h3{
+    font-size: 12px;
+    color: #f27609;
+    text-transform: uppercase;
+}
+.main p{
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 100;
+    line-height: 24px;
+    text-align: justify;
+}
+
+.caminho{
+    
+    list-style: none;
+    padding-left: 0;
+    
+    
+    color: #808080;
+    
+}
+.caminho a{
+    color: #808080;
+}
+.caminho li{
+    display: inline-block;
+}
+
+.img-curriculo {
+    /*para cancelar o float que esse elementoaplica em outro,
+    basta usar "clear: lado que o float está sendo aplicado" no outro elemento,
+    assim todos os elementos abaixo do que foi usado o clear vão ignorar o float*/
+    float: right;
+    width: 300px;
+    margin-top: 45px;
+}
+.social-img{
+    width: 40px;
+    margin-right: 10px;
+}
+.miniatura {
+    width: 320px;
+    height: 320px;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    background-size: contain;
+    overflow: hidden;    
+}
+.miniatura a{
+    text-decoration: none;
+}
+.blackbox{
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0;
+    transition: 1s;
+    padding-top: 130px;
+}
+/*mouse por cima do elemento*/
+.blackbox:hover{
+    opacity: 0.8;
+    transition: 1s;
+}
+
+.blackbox-text{
+    text-align: center;
+}
+.blackbox-text h1{
+    font-size: 16px;
+    color: #f27609;
+    text-transform: uppercase;
+    margin: 0;
+}
+.blackbox-text h2{
+    text-transform: none;
+    font-weight: 100;
+    margin: 0;
+
+}
+
+.fotos-trabalho{
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.back-link{
+    color: #f27609;
+}
+
+@keyframes profile-capa{
+0% {opacity: 0; transform: translate(0px,20px);}
+100% {opacity: 1;transform: translate(0px,0px);}
+}
+@keyframes titulo-capa{
+    0% {opacity: 0; transform: translate(0px,-20px);}
+    100% {opacity: 1;transform: translate(0px,0px);}
+    }
+@keyframes navigation-ani{
+    0% {opacity: 0;}
+    50%{opacity: 0;}
+    100% {opacity: 1;}    
+}
+
+@keyframes conteudo{
+        0% {opacity: 0; transform: translate(-20px,0px);}
+        100% {opacity: 1;transform: translate(0px,0px);}
+}
+
+@media (max-width:1000px){
+
+    .navigation li{
+
+        display: none;
+
+        animation-name: navigation-ani;
+    animation-duration: 0s;
+        
+    }
+
+    .navigation li.menuicon{
+        display: inline-block;
+    }
+
+    .profilePic{
+    width: 100%;
+        text-align: center;
+
+    }
+
+    .profilePic img{
+        margin-top: 0px;
+        max-width: 50%;
+        height:auto;
+
+    }
+    .profileTitle{
+
+        width: 100%;
+        text-align: center;
+
+
+    }
+    .profileTitle h1{
+        margin-top: 20px;
+        font-size: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
+
+
+    }
+    .profileTitle h2{
+        margin-left: 20px;
+        margin-right: 20px;
+
+    }
+    .capa div {
+        display:block;
+        height: auto;
+    }   
+    .main{
+        padding-left:5%;
+        padding-right:5%;
+        padding-top: 10px;
+        padding-bottom: 40px;
+    }
+    .main p{
+        text-align: left;
+        line-height: 30px;
+    }
+    .caminho li{
+        font-size:12px ;
+    }
+    .img-curriculo{
+        float: none;
+        max-width: 80%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .miniatura{
+        max-width: 80%;
+        background-size: 100%,100%;
+    }
+    .blackbox{
+        opacity: 0.8;
+    }
+    .menujs{
+        height: auto;
+        overflow: hidden;
+    }
+    .menujs ul{
+        height: auto;
+        text-align: center;
+        padding-right: 15%;
+        padding-left: 15%;
+    }
+
+    .menujs li{
+        display: block;
+        border-bottom: 1px solid #808080;
+        padding-right: 0;
+        padding-left: 0;
+        width: 100%;
+    }
+}
